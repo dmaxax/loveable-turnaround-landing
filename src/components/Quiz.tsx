@@ -33,7 +33,14 @@ const Quiz: React.FC = () => {
 
   return (
     <div className="quiz-container bg-opacity-90 backdrop-blur-sm">
-      <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent via-primary to-secondary"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent via-primary to-secondary shadow-glow"></div>
+      
+      <div className="absolute top-2 left-1/2 transform -translate-x-1/2 text-xs text-center px-2 py-0.5 rounded-full bg-black/30 backdrop-blur-sm border border-white/20 text-white/70 shadow-glow">
+        <span className="text-accent text-shadow-blue">Late Night</span> 
+        <span className="mx-1">•</span> 
+        <span className="text-primary text-shadow-pink">Chat</span>
+      </div>
+      
       {renderStep()}
       <Footer />
     </div>

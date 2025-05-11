@@ -10,19 +10,23 @@ const FinalStep: React.FC = () => {
   return (
     <div className="quiz-content animate-scale-in">
       <CatImage index={6} />
-      <h1 className="quiz-header">🔓 Access granted. She's online for the next 9 minutes.</h1>
+      <h1 className="quiz-header">
+        <span className="text-primary text-shadow-pink">🔓 Access granted.</span> 
+        <span className="text-white"> She's online for the next</span> 
+        <span className="text-secondary text-shadow-blue"> 9 minutes.</span>
+      </h1>
       <p className="quiz-subheader">Open her message before it disappears.</p>
       <div className="w-full mt-6">
         <QuizButton 
           onClick={() => window.location.href = "https://example.com/signup"} 
-          className="bg-green-500/90 hover:bg-green-500 text-lg py-4 shadow-[0_0_12px_rgba(34,197,94,0.4)]"
+          className="bg-green-500/90 hover:bg-green-500 text-lg py-4 shadow-glow-green border-green-400/50"
         >
           Open Messages Now
         </QuizButton>
         <div className="text-center mt-4">
           <button 
             onClick={resetQuiz}
-            className="text-sm text-gray-400 hover:text-accent transition-colors"
+            className="text-sm text-gray-400 hover:text-accent transition-colors text-shadow"
           >
             Start Over
           </button>

@@ -17,12 +17,12 @@ const QuizButton: React.FC<QuizButtonProps> = ({
   className = '',
   icon
 }) => {
-  const baseStyle = "quiz-button border border-white/10";
+  const baseStyle = "quiz-button border border-white/20";
   
   const variantStyles = {
-    'primary': 'bg-primary/80 hover:bg-primary/90 shadow-[0_0_8px_rgba(255,105,180,0.3)]',
-    'secondary': 'bg-secondary/80 hover:bg-secondary/90 shadow-[0_0_8px_rgba(70,170,220,0.3)]',
-    'negative': 'bg-muted hover:bg-muted/90 text-gray-300'
+    'primary': 'bg-primary/80 hover:bg-primary/90 shadow-glow-pink border-primary/40',
+    'secondary': 'bg-secondary/80 hover:bg-secondary/90 shadow-glow border-secondary/40',
+    'negative': 'bg-muted hover:bg-muted/90 text-gray-300 border-white/10'
   };
   
   return (
