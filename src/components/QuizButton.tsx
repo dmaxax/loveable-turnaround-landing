@@ -17,12 +17,12 @@ const QuizButton: React.FC<QuizButtonProps> = ({
   className = '',
   icon
 }) => {
-  const baseStyle = "quiz-button";
+  const baseStyle = "quiz-button border border-white/10";
   
   const variantStyles = {
-    'primary': 'bg-dating-primary hover:bg-dating-primary/90',
-    'secondary': 'bg-dating-secondary hover:bg-dating-secondary/90',
-    'negative': 'bg-gray-500 hover:bg-gray-600'
+    'primary': 'bg-primary/80 hover:bg-primary/90 shadow-[0_0_8px_rgba(255,105,180,0.3)]',
+    'secondary': 'bg-secondary/80 hover:bg-secondary/90 shadow-[0_0_8px_rgba(70,170,220,0.3)]',
+    'negative': 'bg-muted hover:bg-muted/90 text-gray-300'
   };
   
   return (
@@ -32,7 +32,7 @@ const QuizButton: React.FC<QuizButtonProps> = ({
         baseStyle,
         variantStyles[variant],
         className,
-        'animate-fade-in'
+        'animate-fade-in backdrop-blur-sm'
       )}
     >
       <span className="flex items-center justify-center">

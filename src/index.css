@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 10% 10%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 219 20% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 219 20% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 325 80% 60%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 199 80% 60%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 20% 20%;
+    --muted-foreground: 210 20% 80%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 199 80% 60%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 28% 30%;
+    --input: 215 28% 30%;
+    --ring: 199 80% 60%;
 
     --radius: 0.5rem;
   }
@@ -50,6 +50,16 @@
   }
 }
 
+@layer utilities {
+  .shadow-glow {
+    box-shadow: 0 0 8px 2px rgba(70, 170, 220, 0.3);
+  }
+  
+  .text-shadow {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  }
+}
+
 @layer components {
   .quiz-button {
     @apply w-full rounded-lg py-3 px-4 font-semibold text-white transition-all duration-300 
@@ -65,14 +75,14 @@
   }
   
   .quiz-header {
-    @apply text-2xl md:text-3xl font-bold mb-2 text-center;
+    @apply text-2xl md:text-3xl font-bold mb-2 text-center text-shadow;
   }
   
   .quiz-subheader {
-    @apply text-base md:text-lg text-gray-600 mb-6 text-center;
+    @apply text-base md:text-lg text-gray-300 mb-6 text-center;
   }
   
   .quiz-image {
-    @apply w-56 md:w-64 h-auto mb-6 animate-bounce-soft rounded-xl shadow-md;
+    @apply w-56 md:w-64 h-auto mb-6 rounded-xl shadow-glow;
   }
 }

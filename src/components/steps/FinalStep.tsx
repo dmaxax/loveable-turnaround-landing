@@ -15,14 +15,14 @@ const FinalStep: React.FC = () => {
       <div className="w-full mt-6">
         <QuizButton 
           onClick={() => window.location.href = "https://example.com/signup"} 
-          className="bg-green-500 hover:bg-green-600 text-lg py-4"
+          className="bg-green-500/90 hover:bg-green-500 text-lg py-4 shadow-[0_0_12px_rgba(34,197,94,0.4)]"
         >
           Open Messages Now
         </QuizButton>
         <div className="text-center mt-4">
           <button 
             onClick={resetQuiz}
-            className="text-sm text-gray-500 hover:text-dating-primary"
+            className="text-sm text-gray-400 hover:text-accent transition-colors"
           >
             Start Over
           </button>

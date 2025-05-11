@@ -32,7 +32,8 @@ const Quiz: React.FC = () => {
   };
 
   return (
-    <div className="quiz-container bg-gradient-to-b from-white to-gray-100">
+    <div className="quiz-container bg-opacity-90 backdrop-blur-sm">
+      <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent via-primary to-secondary"></div>
       {renderStep()}
       <Footer />
     </div>
