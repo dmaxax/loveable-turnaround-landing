@@ -14,7 +14,7 @@ const CatImage: React.FC<CatImageProps> = ({ index }) => {
       <img 
         src={imageUrl} 
         alt={`Profile ${index}: ${getProfileReference(index)}`}
-        className="object-cover w-full h-full rounded-xl border-2 border-accent/30 shadow-glow"
+        className="object-cover w-40 h-40 rounded-xl border-2 border-accent/30 shadow-glow"
       />
       <div className="absolute bottom-2 right-2 bg-black/40 text-xs text-white/70 px-2 py-1 rounded-lg backdrop-blur-sm">
         Online Now
