@@ -5,9 +5,10 @@ import QuizButton from '@/components/QuizButton';
 import CatImage from '@/components/CatImage';
 
 const Step5: React.FC = () => {
-  const { setCurrentStep } = useQuiz();
+  const { setCurrentStep, setAgeGroup } = useQuiz();
 
-  const handleSelection = () => {
+  const handleSelection = (ageGroup: 'ya' | 'oa') => {
+    setAgeGroup(ageGroup);
     setCurrentStep('final');
   };
 
@@ -17,11 +18,11 @@ const Step5: React.FC = () => {
       <h1 className="quiz-header">🎂 One last thing. How old are you?</h1>
       <p className="quiz-subheader">We match based on age and location.</p>
       <div className="w-full space-y-3 mt-6">
-        <QuizButton onClick={handleSelection} icon="🧑">Under 25</QuizButton>
-        <QuizButton onClick={handleSelection} icon="🧔">25–34</QuizButton>
-        <QuizButton onClick={handleSelection} icon="👨">35–44</QuizButton>
-        <QuizButton onClick={handleSelection} icon="🧓">45–54</QuizButton>
-        <QuizButton onClick={handleSelection} icon="🧠">55+</QuizButton>
+        <QuizButton onClick={() => handleSelection('ya')} icon="🧑">Under 25</QuizButton>
+        <QuizButton onClick={() => handleSelection('ya')} icon="🧔">25–34</QuizButton>
+        <QuizButton onClick={() => handleSelection('oa')} icon="👨">35–44</QuizButton>
+        <QuizButton onClick={() => handleSelection('oa')} icon="🧓">45–54</QuizButton>
+        <QuizButton onClick={() => handleSelection('oa')} icon="🧠">55+</QuizButton>
       </div>
     </div>
   );

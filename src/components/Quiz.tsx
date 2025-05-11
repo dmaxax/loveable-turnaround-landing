@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useQuiz } from '@/contexts/QuizContext';
 import Step1 from './steps/Step1';
 import Step2 from './steps/Step2';
@@ -10,7 +10,14 @@ import FinalStep from './steps/FinalStep';
 import Footer from './Footer';
 
 const Quiz: React.FC = () => {
-  const { currentStep } = useQuiz();
+  const { currentStep, handleBackOffer } = useQuiz();
+  
+  // Set up history for steps before final
+  useEffect(() => {
+    if (currentStep !== 'final') {
+      window.history.pushState(null, '', window.location.pathname);
+    }
+  }, [currentStep]);
   
   const renderStep = () => {
     switch (currentStep) {

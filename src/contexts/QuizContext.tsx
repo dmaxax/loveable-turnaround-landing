@@ -3,19 +3,25 @@ import React, { createContext, useContext, useState } from 'react';
 
 export type Step = 1 | 2 | 3 | 4 | 5 | 'final';
 export type TurnaroundState = 'initial' | 'turnaround';
+export type AgeGroup = 'ya' | 'oa' | null;
 
 interface QuizContextType {
   currentStep: Step;
   turnaroundState: Record<number, TurnaroundState>;
+  ageGroup: AgeGroup;
   setCurrentStep: (step: Step) => void;
   setTurnaroundState: (step: number, state: TurnaroundState) => void;
+  setAgeGroup: (group: AgeGroup) => void;
   resetQuiz: () => void;
+  handleSecondOffer: () => void;
+  handleBackOffer: () => void;
 }
 
 const QuizContext = createContext<QuizContextType | undefined>(undefined);
 
 export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currentStep, setCurrentStep] = useState<Step>(1);
+  const [ageGroup, setAgeGroup] = useState<AgeGroup>(null);
   const [turnaroundState, setTurnaroundStateRecord] = useState<Record<number, TurnaroundState>>({
     1: 'initial',
     2: 'initial',
@@ -33,6 +39,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const resetQuiz = () => {
     setCurrentStep(1);
+    setAgeGroup(null);
     setTurnaroundStateRecord({
       1: 'initial',
       2: 'initial',
@@ -42,13 +49,44 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     });
   };
 
+  // Keitaro tracking functions
+  const handleSecondOffer = () => {
+    const baseUrl = "https://example.com/second-offer";
+    const params = new URLSearchParams();
+    
+    if (ageGroup) {
+      params.append('sub5', ageGroup);
+    }
+    
+    const url = `${baseUrl}?${params.toString()}`;
+    console.log("Redirecting to second offer:", url);
+    window.location.href = url;
+  };
+
+  const handleBackOffer = () => {
+    const baseUrl = "https://example.com/back-offer";
+    const params = new URLSearchParams();
+    
+    if (ageGroup) {
+      params.append('sub5', ageGroup);
+    }
+    
+    const url = `${baseUrl}?${params.toString()}`;
+    console.log("Redirecting to back offer:", url);
+    window.location.href = url;
+  };
+
   return (
     <QuizContext.Provider value={{ 
       currentStep, 
-      turnaroundState, 
+      turnaroundState,
+      ageGroup,
       setCurrentStep, 
       setTurnaroundState,
-      resetQuiz
+      setAgeGroup,
+      resetQuiz,
+      handleSecondOffer,
+      handleBackOffer
     }}>
       {children}
     </QuizContext.Provider>
