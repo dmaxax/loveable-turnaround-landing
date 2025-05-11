@@ -6,8 +6,8 @@ interface CatImageProps {
 }
 
 const CatImage: React.FC<CatImageProps> = ({ index }) => {
-  // Use the uploaded image for all steps
-  const imageUrl = "public/lovable-uploads/d3ec0165-3492-44d7-b077-d41eee42cbbe.png";
+  // Fix the image path - remove 'public/' prefix as it's not needed in Vite
+  const imageUrl = "/lovable-uploads/d3ec0165-3492-44d7-b077-d41eee42cbbe.png";
 
   return (
     <div className="quiz-image relative overflow-hidden neon-border">
