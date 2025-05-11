@@ -14,8 +14,8 @@ const Step4: React.FC = () => {
   return (
     <div className="quiz-content animate-fade-in">
       <CatImage index={4} />
-      <h1 className="quiz-header">👀 Who are you hoping to hear from tonight?</h1>
-      <p className="quiz-subheader">We'll put you in her inbox first.</p>
+      <h1 className="quiz-header">🔮 There's always someone awake… what vibe are you chasing tonight?</h1>
+      <p className="quiz-subheader">We'll find her, or maybe she'll find you. Depends how you click.</p>
       <div className="w-full space-y-3 mt-6">
         <QuizButton onClick={handleSelection} className="bg-pink-500 hover:bg-pink-600" icon="💋">Married but bored</QuizButton>
         <QuizButton onClick={handleSelection} className="bg-purple-500 hover:bg-purple-600" icon="💄">Single & teasing</QuizButton>

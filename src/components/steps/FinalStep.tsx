@@ -40,11 +40,11 @@ const FinalStep: React.FC = () => {
     <div className="quiz-content animate-scale-in">
       <CatImage index={6} />
       <h1 className="quiz-header">
-        <span className="text-primary text-shadow-pink">🔓 Access granted.</span> 
-        <span className="text-white"> She's online for the next</span> 
-        <span className="text-secondary text-shadow-blue"> 9 minutes.</span>
+        <span className="text-primary text-shadow-pink">✉️ You're in.</span> 
+        <span className="text-white"> Her screen just blinked.</span> 
+        <span className="text-secondary text-shadow-blue"> She thinks you're someone interesting.</span>
       </h1>
-      <p className="quiz-subheader">Open her message before it disappears.</p>
+      <p className="quiz-subheader">It's not a match. It's a moment. One message. One night. You ready?</p>
       <div className="w-full mt-6">
         <QuizButton 
           onClick={handlePrimaryClick}

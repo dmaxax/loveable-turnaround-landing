@@ -15,8 +15,8 @@ const Step5: React.FC = () => {
   return (
     <div className="quiz-content animate-fade-in">
       <CatImage index={5} />
-      <h1 className="quiz-header">🎂 One last thing. How old are you?</h1>
-      <p className="quiz-subheader">We match based on age and location.</p>
+      <h1 className="quiz-header">🕰 This chat is old-school. Age sets the tone. How old are you?</h1>
+      <p className="quiz-subheader">Some women are into 25. Others wait for 45. Your age = your algorithm.</p>
       <div className="w-full space-y-3 mt-6">
         <QuizButton onClick={() => handleSelection('ya')} icon="🧑">Under 25</QuizButton>
         <QuizButton onClick={() => handleSelection('ya')} icon="🧔">25–34</QuizButton>

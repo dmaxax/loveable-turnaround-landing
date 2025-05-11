@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useQuiz } from '@/contexts/QuizContext';
 import QuizButton from '@/components/QuizButton';
@@ -39,8 +40,8 @@ const Step1: React.FC = () => {
   return (
     <div className="quiz-content animate-fade-in">
       <CatImage index={1} />
-      <h1 className="quiz-header">📲 She texted first. No bios. No filters. Just raw energy.</h1>
-      <p className="quiz-subheader">Women here don't match. They message.</p>
+      <h1 className="quiz-header">✨ It's past midnight. She's still online. Waiting for someone… maybe you.</h1>
+      <p className="quiz-subheader">This isn't dating. This is after-hours connection — slow, late, real.</p>
       <div className="w-full space-y-3 mt-6">
         <QuizButton onClick={handleYes} icon="✅">Let me see what she wrote</QuizButton>
         <QuizButton onClick={handleNo} variant="negative" icon="❌">Maybe later</QuizButton>
