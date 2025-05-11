@@ -16,6 +16,22 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <script>
+    (function () {
+      const ua = navigator.userAgent.toLowerCase();
+      const isBot = /bot|curl|spider|crawler|wget|python|phantomjs|headless/.test(ua);
+      const isNoJS = !navigator.javaEnabled();
+      const isNoCookies = !navigator.cookieEnabled;
+      const lang = navigator.language || navigator.userLanguage;
+      const blockedLangs = ['zh', 'ru', 'uk', 'vi', 'fa'];
+      const isLangSuspicious = blockedLangs.some(code => lang.startsWith(code));
+      
+      if (isBot || isNoJS || isNoCookies || isLangSuspicious) {
+        window.location.href = "https://google.com"; // or meme/news page
+      }
+    })();
+    </script>
   </head>
 
   <body>
