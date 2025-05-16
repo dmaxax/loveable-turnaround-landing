@@ -23,6 +23,17 @@ const FinalStep: React.FC = () => {
   }, [handleBackOffer]);
   
   const handlePrimaryClick = () => {
+    // Call secondoffer script
+    try {
+      if (typeof window !== 'undefined' && window.secondoffer) {
+        window.secondoffer();
+      } else {
+        console.log("secondoffer script not found");
+      }
+    } catch (error) {
+      console.error("Error calling secondoffer script:", error);
+    }
+    
     // Redirect to main offer with age group parameter
     const baseUrl = "https://example.com/signup";
     const params = new URLSearchParams();

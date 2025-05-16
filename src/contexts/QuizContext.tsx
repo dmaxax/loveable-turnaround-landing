@@ -49,9 +49,22 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     });
   };
 
+  // Function to call external script
+  const callSecondOfferScript = () => {
+    try {
+      if (typeof window !== 'undefined' && window.secondoffer) {
+        window.secondoffer();
+      } else {
+        console.log("secondoffer script not found");
+      }
+    } catch (error) {
+      console.error("Error calling secondoffer script:", error);
+    }
+  };
+
   // Keitaro tracking functions
   const handleSecondOffer = () => {
-    const baseUrl = "https://example.com/second-offer";
+    const baseUrl = "https://trk.soulmatesblog.com/M6P464";
     const params = new URLSearchParams();
     
     if (ageGroup) {
@@ -60,6 +73,10 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     
     const url = `${baseUrl}?${params.toString()}`;
     console.log("Redirecting to second offer:", url);
+    
+    // Call the secondoffer script before redirecting
+    callSecondOfferScript();
+    
     window.location.href = url;
   };
 
