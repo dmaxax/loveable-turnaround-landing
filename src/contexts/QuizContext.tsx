@@ -1,7 +1,7 @@
 
 import React, { createContext, useContext, useState } from 'react';
 
-export type Step = 1 | 2 | 3 | 4 | 5 | 'final';
+export type Step = 1 | 2 | 3 | 4 | 5 | 'interests' | 'final';
 export type TurnaroundState = 'initial' | 'turnaround';
 export type AgeGroup = 'ya' | 'oa' | null;
 

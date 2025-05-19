@@ -6,6 +6,7 @@ import Step2 from './steps/Step2';
 import Step3 from './steps/Step3';
 import Step4 from './steps/Step4';
 import Step5 from './steps/Step5';
+import InterestsStep from './steps/InterestsStep';
 import FinalStep from './steps/FinalStep';
 import Footer from './Footer';
 
@@ -31,6 +32,8 @@ const Quiz: React.FC = () => {
         return <Step4 />;
       case 5:
         return <Step5 />;
+      case 'interests':
+        return <InterestsStep />;
       case 'final':
         return <FinalStep />;
       default:
