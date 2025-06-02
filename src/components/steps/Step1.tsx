@@ -28,10 +28,10 @@ const Step1: React.FC = () => {
     return (
       <div className="quiz-content animate-fade-in">
         <CatImage index={1} />
-        <h1 className="quiz-header">She'll be offline in 5 minutes. Want her to think you're shy?</h1>
+        <h1 className="quiz-header">She's looking for someone genuine. Ready to take a chance?</h1>
         <div className="w-full space-y-3 mt-6">
-          <QuizButton onClick={handleTurnaroundYes}>Show me anyway</QuizButton>
-          <QuizButton onClick={handleTurnaroundNo} variant="negative">Leave quietly</QuizButton>
+          <QuizButton onClick={handleTurnaroundYes}>Show me her profile</QuizButton>
+          <QuizButton onClick={handleTurnaroundNo} variant="negative">Maybe later</QuizButton>
         </div>
       </div>
     );
@@ -40,11 +40,11 @@ const Step1: React.FC = () => {
   return (
     <div className="quiz-content animate-fade-in">
       <CatImage index={1} />
-      <h1 className="quiz-header">✨ It's past midnight. She's still online. Waiting for someone… maybe you.</h1>
-      <p className="quiz-subheader">This isn't dating. This is after-hours connection — slow, late, real.</p>
+      <h1 className="quiz-header">✨ There's someone special online right now. Looking for a real connection.</h1>
+      <p className="quiz-subheader">This isn't just another dating app. Find someone who's actually interested in getting to know you.</p>
       <div className="w-full space-y-3 mt-6">
-        <QuizButton onClick={handleYes} icon="✅">Let me see what she wrote</QuizButton>
-        <QuizButton onClick={handleNo} variant="negative" icon="❌">Maybe later</QuizButton>
+        <QuizButton onClick={handleYes} icon="✅">I'm interested</QuizButton>
+        <QuizButton onClick={handleNo} variant="negative" icon="❌">Not for me</QuizButton>
       </div>
     </div>
   );

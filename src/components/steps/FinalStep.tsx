@@ -51,17 +51,17 @@ const FinalStep: React.FC = () => {
     <div className="quiz-content animate-scale-in">
       <CatImage index={6} />
       <h1 className="quiz-header">
-        <span className="text-primary text-shadow-pink">✉️ You're in.</span> 
-        <span className="text-white"> Her screen just blinked.</span> 
-        <span className="text-secondary text-shadow-blue"> She thinks you're someone interesting.</span>
+        <span className="text-primary text-shadow-pink">🎉 Perfect match found!</span> 
+        <span className="text-white"> She's interested in getting to know you.</span> 
+        <span className="text-secondary text-shadow-blue"> Ready to start chatting?</span>
       </h1>
-      <p className="quiz-subheader">It's not a match. It's a moment. One message. One night. You ready?</p>
+      <p className="quiz-subheader">Your profiles are compatible. Time to see where this conversation leads.</p>
       <div className="w-full mt-6">
         <QuizButton 
           onClick={handlePrimaryClick}
           className="bg-green-500/90 hover:bg-green-500 text-lg py-4 shadow-glow-green border-green-400/50"
         >
-          Open Messages Now
+          Start Chatting Now
         </QuizButton>
         <div className="text-center mt-4">
           <button 
@@ -76,7 +76,7 @@ const FinalStep: React.FC = () => {
             onClick={handleSecondOffer}
             className="text-sm text-secondary hover:text-accent transition-colors text-shadow-blue"
           >
-            Other Available Girls
+            Browse Other Profiles
           </button>
         </div>
       </div>

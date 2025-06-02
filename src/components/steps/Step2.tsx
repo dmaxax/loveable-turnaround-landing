@@ -23,9 +23,9 @@ const Step2: React.FC = () => {
     return (
       <div className="quiz-content animate-fade-in">
         <CatImage index={2} />
-        <h1 className="quiz-header">She likes that too — she just wants you to prove it.</h1>
+        <h1 className="quiz-header">She appreciates confidence and knows what she wants.</h1>
         <div className="w-full space-y-3 mt-6">
-          <QuizButton onClick={handleTurnaroundYes}>I'll prove it</QuizButton>
+          <QuizButton onClick={handleTurnaroundYes}>That sounds perfect</QuizButton>
         </div>
       </div>
     );
@@ -34,11 +34,11 @@ const Step2: React.FC = () => {
   return (
     <div className="quiz-content animate-fade-in">
       <CatImage index={2} />
-      <h1 className="quiz-header">☎️ She asked the first question. "So… can we skip the small talk?"</h1>
-      <p className="quiz-subheader">Some women here say too much, some say nothing — until you answer.</p>
+      <h1 className="quiz-header">💬 She sent you a message: "I like people who are direct and honest."</h1>
+      <p className="quiz-subheader">Some people take forever to open up. She's not one of them.</p>
       <div className="w-full space-y-3 mt-6">
-        <QuizButton onClick={handleYes} icon="✅">That turns me on</QuizButton>
-        <QuizButton onClick={handleNo} variant="negative" icon="❌">I prefer to lead</QuizButton>
+        <QuizButton onClick={handleYes} icon="✅">I appreciate honesty</QuizButton>
+        <QuizButton onClick={handleNo} variant="negative" icon="❌">I prefer taking it slow</QuizButton>
       </div>
     </div>
   );
