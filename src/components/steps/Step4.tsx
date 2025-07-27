@@ -14,13 +14,13 @@ const Step4: React.FC = () => {
   return (
     <div className="quiz-content animate-fade-in">
       <CatImage index={4} />
-      <h1 className="quiz-header">💕 What kind of connection are you hoping to find?</h1>
-      <p className="quiz-subheader">Everyone's looking for something different. What speaks to you?</p>
+      <h1 className="quiz-header">💕 Nach welcher Art von Verbindung suchst du?</h1>
+      <p className="quiz-subheader">Jeder sucht nach etwas anderem. Was spricht dich an?</p>
       <div className="w-full space-y-3 mt-6">
-        <QuizButton onClick={handleSelection} className="bg-pink-500 hover:bg-pink-600" icon="💝">Someone thoughtful</QuizButton>
-        <QuizButton onClick={handleSelection} className="bg-purple-500 hover:bg-purple-600" icon="✨">Someone adventurous</QuizButton>
-        <QuizButton onClick={handleSelection} className="bg-blue-600 hover:bg-blue-700" icon="🎯">Someone focused</QuizButton>
-        <QuizButton onClick={handleSelection} className="bg-green-600 hover:bg-green-700" icon="🌱">Someone genuine</QuizButton>
+        <QuizButton onClick={handleSelection} className="bg-pink-500 hover:bg-pink-600" icon="💝">Jemand Aufmerksamen</QuizButton>
+        <QuizButton onClick={handleSelection} className="bg-purple-500 hover:bg-purple-600" icon="✨">Jemand Abenteuerlustigen</QuizButton>
+        <QuizButton onClick={handleSelection} className="bg-blue-600 hover:bg-blue-700" icon="🎯">Jemand Zielstrebigen</QuizButton>
+        <QuizButton onClick={handleSelection} className="bg-green-600 hover:bg-green-700" icon="🌱">Jemand Echten</QuizButton>
       </div>
     </div>
   );

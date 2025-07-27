@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useQuiz } from '@/contexts/QuizContext';
 import QuizButton from '@/components/QuizButton';
@@ -23,9 +22,9 @@ const Step3: React.FC = () => {
     return (
       <div className="quiz-content animate-fade-in">
         <CatImage index={3} />
-        <h1 className="quiz-header">Fair enough. Want to see what she's really like?</h1>
+        <h1 className="quiz-header">In Ordnung. Willst du sehen, wie sie wirklich ist?</h1>
         <div className="w-full space-y-3 mt-6">
-          <QuizButton onClick={handleTurnaroundYes}>Show me her profile</QuizButton>
+          <QuizButton onClick={handleTurnaroundYes}>Zeig mir ihr Profil</QuizButton>
         </div>
       </div>
     );
@@ -34,11 +33,11 @@ const Step3: React.FC = () => {
   return (
     <div className="quiz-content animate-fade-in">
       <CatImage index={3} />
-      <h1 className="quiz-header">🌟 She just sent: "Are you free to chat tonight?"</h1>
-      <p className="quiz-subheader">Sometimes the best connections happen when you least expect them.</p>
+      <h1 className="quiz-header">🌟 Sie schreibt gerade: "Hast du heute Abend Zeit zu chatten?"</h1>
+      <p className="quiz-subheader">Manchmal entstehen die besten Verbindungen, wenn man sie am wenigsten erwartet.</p>
       <div className="w-full space-y-3 mt-6">
-        <QuizButton onClick={handleYes} icon="💬">I'd love to chat</QuizButton>
-        <QuizButton onClick={handleNo} variant="negative" icon="❌">Not tonight</QuizButton>
+        <QuizButton onClick={handleYes} icon="💬">Ich würde gerne chatten</QuizButton>
+        <QuizButton onClick={handleNo} variant="negative" icon="❌">Heute Abend nicht</QuizButton>
       </div>
     </div>
   );

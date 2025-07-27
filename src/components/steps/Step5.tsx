@@ -15,10 +15,10 @@ const Step5: React.FC = () => {
   return (
     <div className="quiz-content animate-fade-in">
       <CatImage index={5} />
-      <h1 className="quiz-header">🎂 Age is just a number, but it helps us find your perfect match. How old are you?</h1>
-      <p className="quiz-subheader">Different people connect better at different life stages. Help us find yours.</p>
+      <h1 className="quiz-header">🎂 Alter ist nur eine Zahl, aber es hilft uns, deinen perfekten Partner zu finden. Wie alt bist du?</h1>
+      <p className="quiz-subheader">Verschiedene Menschen verbinden sich besser in verschiedenen Lebensphasen. Hilf uns, deine zu finden.</p>
       <div className="w-full space-y-3 mt-6">
-        <QuizButton onClick={() => handleSelection('ya')} icon="👶">Under 20</QuizButton>
+        <QuizButton onClick={() => handleSelection('ya')} icon="👶">Unter 20</QuizButton>
         <QuizButton onClick={() => handleSelection('ya')} icon="🧑">21–30</QuizButton>
         <QuizButton onClick={() => handleSelection('oa')} icon="🧔">31–40</QuizButton>
         <QuizButton onClick={() => handleSelection('oa')} icon="👨">41–50</QuizButton>
